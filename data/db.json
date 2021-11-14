@@ -3,27 +3,32 @@
      {
          "id":0,
          "title": "1 Night stay in venice",
-         "price": "120₹"
+         "price": "120₹",
+         "loc": "europe"
      },
      {
         "id":1,
          "title": "1 Night stay in Paris",
-         "price": "120₹"
+         "price": "120₹",
+         "loc": "europe"
      },
      {
         "id":2,
          "title": "1 Night stay in Avishek",
-         "price": "120₹"
+         "price": "120₹",
+         "loc": "europe"
      },
      {
         "id":3,
          "title": "1 Night stay in Kumaud",
-         "price": "120₹"
+         "price": "120₹",
+         "loc": "europe"
      },
      {
         "id":4,
          "title": "1 Night stay in santosh",
-         "price": "120₹"
+         "price": "120₹",
+         "loc": "america"
      }
 ]   
 }

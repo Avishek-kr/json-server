@@ -2,7 +2,7 @@ import React from 'react'
 
 const TripCom = ({title, price, id}) => {
     return (
-        <div style={{width:"480px", margin: "60px auto"}}>
+        <div>
             <ul style={{padding:"0"}}>
                 <li key={id} style={{border:"1px solid #e4e4e4", padding:"10px", listStyleType:"none",
                 margin:"20px 0"}}>
