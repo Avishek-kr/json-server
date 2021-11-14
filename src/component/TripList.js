@@ -4,12 +4,13 @@ import TripCom from './TripCom'
 
 function TripList() {
     const [url, setUrl]= useState('http://localhost:3000/trips')
-    const { data: trips} =  useFetch(url)
+    const { data: trips, isPending} =  useFetch(url)
 
 
     return (
         <div style={{width:"480px", margin: "60px auto"}}>
         <h2>Trips List</h2>
+        {isPending && <div>Loading trips...</div>}
         {trips &&
         trips.map((trip)=>(
             <TripCom key={trip.id} title={trip.title} price={trip.price} />
