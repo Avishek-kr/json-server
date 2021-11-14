@@ -1,27 +1,16 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import useFetch from '../hooks/UseFetch'
 import TripCom from './TripCom'
 
 function TripList() {
-    const [trips, setTrips]= useState([])
     const [url, setUrl]= useState('http://localhost:3000/trips')
-
-
-    const fetchTrips =useCallback(async ()=>{
-        const res = await fetch(url)
-        const json = await res.json()
-        setTrips(json)
-    },[url])
-
-    useEffect(()=>{
-        fetchTrips()
-    },[fetchTrips] )
-    console.log(trips)
+    const { data: trips} =  useFetch(url)
 
 
     return (
         <div style={{width:"480px", margin: "60px auto"}}>
         <h2>Trips List</h2>
-        {
+        {trips &&
         trips.map((trip)=>(
             <TripCom key={trip.id} title={trip.title} price={trip.price} />
         ))
