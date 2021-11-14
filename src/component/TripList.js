@@ -3,7 +3,7 @@ import useFetch from '../hooks/UseFetch'
 import TripCom from './TripCom'
 
 function TripList() {
-    const [url, setUrl]= useState('http://localhost:3000/tripsfgfg')
+    const [url, setUrl]= useState('http://localhost:3000/trips')
     const { data: trips, isPending, error} =  useFetch(url)
 
 
